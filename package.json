@@ -1,0 +1,19 @@
+{
+  "name": "blogapi",
+  "version": "1.0.0",
+  "description": "Teknolojiler: Express.js, Node.js, PostgreSQL, Docker\r Amaç: CRUD işlemlerini öğrenmek ve API tasarımını göstermek.\r Özellikler:\r Kullanıcılar için oturum açma/kapatma.\r Yazı oluşturma, düzenleme, silme ve listeleme.\r Docker kullanarak geliştirme ve dağıtım.\r Veritabanında ilişkisel yapı (yazarlar ve yazılar).",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
