@@ -29,7 +29,7 @@ Blog App API, Express.js ve MongoDB kullanarak oluşturulmuş bir blog yönetim 
 1. Depoyu klonlayın:
 
    ```bash
-   git clone https://github.com/kullaniciadi/blog-api.git
+   git clone https://github.com/MehmetYilmazY/blog-api.git
    ```
 
 2. Bağımlılıkları yükleyin:
