@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    container: node:20
 
     steps:
       - name: Repozitoriyi Kopyala
@@ -20,9 +21,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Bağımlılıkları Yükle
-        run: npm install
+          
+      - name: Bağımlılıkları Yükle (CI)
+        run: npm ci
 
       - name: Testleri Çalıştır
         run: npm test
+
+      - name: Çalıştır
+        run: npm start
