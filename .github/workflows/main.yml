@@ -1,19 +1,28 @@
-name: a blog api made with express js
+name: Node.js CI
 
 on:
   push:
     branches:
-      -master
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    steps: 
-     - uses: actions/chechout@v2
-     - uses: actions/setup-node
-       with:
-         node-version: 12
-     - run: npm ci
-     - run: npm test
-     - run: npm run build
-     - run: npm run deploy
+
+    steps:
+      - name: Repozitoriyi Kopyala
+        uses: actions/checkout@v3
+
+      - name: Node.js Kur
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Bağımlılıkları Yükle
+        run: npm install
+
+      - name: Testleri Çalıştır
+        run: npm test
